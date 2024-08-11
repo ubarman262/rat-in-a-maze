@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+#maze-container {
+  display: grid;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: #333;
+}
+
+#generate-maze {
+  display: inline;
+  background: gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+#start {
+  display: inline;
+  background: green;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+#pause-resume {
+  display: inline;
+  background: lightblue;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+#reset {
+  display: inline;
+  background: red;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.cell.wall {
+  background-color: black;
+}
+
+.cell.source {
+  background-color: green;
+}
+
+.cell.destination {
+  background-color: red;
+}
+
+.cell.rat {
+  background-color: orange;
+  transition: background-color 0.5s;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: red;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #333333;
+  margin: 15% auto;
+  padding: 20px 20px 40px 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 300px;
+  height: 60px;
+  text-align: center;
+  color: green;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  display: none;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

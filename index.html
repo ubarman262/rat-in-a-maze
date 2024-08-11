@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rat in a Maze</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="victoryModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <br id="victoryMessage">
+          &#127882;&#127882;&#127882;</br>Victory! The rat reached the destination!
+        </p>
+      </div>
+    </div>
+    <h1>Rat in a Maze</h1>
+    <div id="controls">
+      <label for="size">Maze Size (NxN):</label>
+      <input type="number" id="size" value="5" min="2" max="10" />
+      <button id="generate-maze">Build Maze</button>
+      <button id="start">Start</button>
+      <button id="pause-resume" style="display: none">Pause</button>
+      <button id="reset">Reset</button>
+    </div>
+    <div id="maze-container"></div>
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
